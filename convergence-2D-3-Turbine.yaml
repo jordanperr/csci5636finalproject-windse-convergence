@@ -1,6 +1,6 @@
 # General options
 general: 
-    name: 2_5D_Wind_Farm_1x      # Name of the output folder
+    name: 2D_Wind_Farm      # Name of the output folder
     output: ["mesh","initial_guess","height","turbine_force","solution"]
 
 # Wind Farm Parameters: Uncomment a set to change the type of wind farm
@@ -50,21 +50,21 @@ wind_farm:
 domain: 
     
     ####################### Rectangle Domain #########################
-    # type: rectangle        #                      |
-    # x_range: [-1200, 1200] # x-range of the domain | m
-    # y_range: [-1200, 1200] # y-range of the domain | m
-    # nx: 100                # Number of x-nodes     | -
-    # ny: 100                # Number of y-nodes     | -
+    type: rectangle        #                      |
+    x_range: [-1200, 1200] # x-range of the domain | m
+    y_range: [-1200, 1200] # y-range of the domain | m
+    nx: 100                # Number of x-nodes     | -
+    ny: 100                # Number of y-nodes     | -
     ##################################################################
     
 
     # ########################### Circle Domain #########################
-    type: circle                                  
-    mesh_type: mshr         # squircular, elliptic, stretch
-    radius: 1200            # x-range of the domain | m
-    center: [0.0, 0.0]      # y-range of the domain | m
-    nt: 62                  # segments around circle| -
-    res: 50                 # resolution for mshr   | -
+    #type: circle                                  
+    #mesh_type: mshr         # squircular, elliptic, stretch
+    #radius: 1200            # x-range of the domain | m
+    #center: [0.0, 0.0]      # y-range of the domain | m
+    #nt: 62                  # segments around circle| -
+    #res: 50                 # resolution for mshr   | -
     # ###################################################################
 
 
@@ -76,9 +76,7 @@ refine:
     # farm_factor: 1.25       # farm radius multiplier       | -
     turbine_num: 1         # number of turbine refinements| -
     turbine_factor: 1.25   # turbine radius multiplier    | -
-    refine_custom: [
-        [box, [  [[-1000,1200],[-200,200]]]  ]
-    ]
+
 function_space:
     type: taylor_hood
 
