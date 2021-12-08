@@ -9,7 +9,7 @@ def run():
     params_dict = yaml.safe_load(open("convergence-2D-3-Turbine.yaml"))
     results = []
 
-    for nx in range(10,100+1,10):
+    for nx in range(110,200+1,10):
 
         params_dict["domain"]["nx"] = nx
         params_dict["domain"]["ny"] = nx
